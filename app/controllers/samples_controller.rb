@@ -8,6 +8,7 @@ class SamplesController < ApplicationController
 
   # GET /samples/1
   def show
+    @samples = Sample.find(params[:id])
   end
 
   # GET /samples/new
@@ -17,6 +18,7 @@ class SamplesController < ApplicationController
 
   # GET /samples/1/edit
   def edit
+    @sample = Sample.find(params[:id])
   end
 
   # POST /samples
