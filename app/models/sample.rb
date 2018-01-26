@@ -1,4 +1,4 @@
 class Sample < ApplicationRecord
   belongs_to :user
-  audited
+   audited associated_with: :user
 end

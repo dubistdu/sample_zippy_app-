@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
+    @samples = Sample.all
   end
 
   # GET /users/1
@@ -9,6 +10,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  # GET /logs
   # GET /users/new
   def new
     @user = User.new

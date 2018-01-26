@@ -1,4 +1,4 @@
 class User < ApplicationRecord
   has_many :samples
-  audited
+  has_associated_audits
 end

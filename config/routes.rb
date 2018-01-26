@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :users
   resources :samples
-   root 'samples#index'
+   root 'users#index'
 end
