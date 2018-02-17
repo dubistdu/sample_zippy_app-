@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @samples = Sample.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @users.to_csv }
+    end
   end
 
   # GET /users/1
@@ -48,6 +52,8 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to users_url, notice: 'User was successfully destroyed.'
   end
+
+# CSV
 
   private
 
